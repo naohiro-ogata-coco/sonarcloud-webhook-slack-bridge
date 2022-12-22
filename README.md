@@ -66,7 +66,7 @@ Test a single function by invoking it directly with a test event. An event is a 
 Run functions locally and invoke them with the `sam local invoke` command.
 
 ```bash
-sonarcloud-webhook-slack-bridge$ sam local invoke HelloWorldFunction --event events/event.json
+sonarcloud-webhook-slack-bridge$ sam local invoke SonarCloudWebhookSlackBridgeFunction --event events/event.json
 ```
 
 The SAM CLI can also emulate your application's API. Use the `sam local start-api` to run the API locally on port 3000.
@@ -80,7 +80,7 @@ The SAM CLI reads the application template to determine the API's routes and the
 
 ```yaml
       Events:
-        HelloWorld:
+        SonarCloudWebhookSlackBridge:
           Type: Api
           Properties:
             Path: /hello
@@ -97,7 +97,7 @@ To simplify troubleshooting, SAM CLI has a command called `sam logs`. `sam logs`
 `NOTE`: This command works for all AWS Lambda functions; not just the ones you deploy using SAM.
 
 ```bash
-sonarcloud-webhook-slack-bridge$ sam logs -n HelloWorldFunction --stack-name sonarcloud-webhook-slack-bridge --tail
+sonarcloud-webhook-slack-bridge$ sam logs -n SonarCloudWebhookSlackBridgeFunction --stack-name sonarcloud-webhook-slack-bridge --tail
 ```
 
 You can find more information and examples about filtering Lambda function logs in the [SAM CLI Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-logging.html).
