@@ -44,6 +44,6 @@ Outputs:
   SonarCloudWebhookSlackBridgeFunction:
     Description: "SonarCloud Webhook Slack Bridge Lambda Function ARN"
     Value: !GetAtt SonarCloudWebhookSlackBridgeFunction.Arn
-  SonarCloudWebhookSlackBridgeFunctionIamRole:
+  SonarCloudWebhookSlackBridgeFunctionRole:
     Description: "Implicit IAM Role created for SonarCloud Webhook Slack Bridge function"
-    Value: !GetAtt SonarCloudWebhookSlackBridgeFunctionIamRole.Arn
+    Value: !GetAtt SonarCloudWebhookSlackBridgeFunctionRole.Arn
