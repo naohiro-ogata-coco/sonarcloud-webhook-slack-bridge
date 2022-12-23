@@ -25,6 +25,10 @@ Resources:
           Properties:
             Path: /bridge
             Method: post
+      Environment:
+        Variables:
+          SLACK_WEBHOOK_URL: !Ref SlackWebhookUrl
+
     Metadata: # Manage esbuild properties
       BuildMethod: esbuild
       BuildProperties:
@@ -33,6 +37,12 @@ Resources:
         Sourcemap: true
         EntryPoints: 
         - app.ts
+
+Parameters:
+  SlackWebhookUrl:
+    Type: String
+    Description: Slack Webhook URL
+    Default: https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXX
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function

@@ -1,5 +1,5 @@
 {
-  "name": "hello_world",
+  "name": "sonarcloud-webhook-slack-bridge",
   "version": "1.0.0",
   "description": "hello world sample for NodeJS",
   "main": "app.js",
@@ -13,6 +13,7 @@
     "test": "npm run compile && npm run unit"
   },
   "dependencies": {
+    "@slack/webhook": "^6.1.0",
     "esbuild": "^0.14.54"
   },
   "devDependencies": {
