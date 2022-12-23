@@ -1,7 +1,7 @@
 {
   "body": "{\"message\": \"hello world\"}",
   "resource": "/{proxy+}",
-  "path": "/path/to/resource",
+  "path": "/bridge",
   "httpMethod": "POST",
   "isBase64Encoded": false,
   "queryStringParameters": {

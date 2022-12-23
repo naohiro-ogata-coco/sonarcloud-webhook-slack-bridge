@@ -66,7 +66,7 @@ Test a single function by invoking it directly with a test event. An event is a 
 Run functions locally and invoke them with the `sam local invoke` command.
 
 ```bash
-sonarcloud-webhook-slack-bridge$ sam local invoke SonarCloudWebhookSlackBridgeFunction --event events/event.json
+sonarcloud-webhook-slack-bridge$ npx ts-node util/event.ts | sam local invoke SonarCloudWebhookSlackBridgeFunction --event -
 ```
 
 The SAM CLI can also emulate your application's API. Use the `sam local start-api` to run the API locally on port 3000.
